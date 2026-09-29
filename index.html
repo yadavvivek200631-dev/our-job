@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUR JOBS - Your Cute & Clean Placement Preparation Platform</title>
+  <meta name="description" content="One unified, friendly platform for freshers: Discover Jobs, Practice DSA, Study Aptitude, Master Core CS Subjects, and Crack Interviews.">
+  
+  <!-- Fonts: Outfit (Cute friendly headings) + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            cream: {
+              50: '#FDFBF7',
+              100: '#FAF7F2',
+              200: '#F3EFE8',
+              300: '#ECE5DB',
+              400: '#DCD3C5',
+              700: '#6B655B',
+              800: '#4A443B',
+              900: '#2B2823',
+            },
+            brand: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti for celebrations -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Chart.js for Readiness Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#FAF7F2] dark:bg-[#12151B] text-[#2B2823] dark:text-[#F7FAFC] transition-colors duration-200 antialiased selection:bg-rose-200 selection:text-rose-900">
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full border-b border-[#ECE5DB] dark:border-[#2A3241] bg-[#FAF7F2]/90 dark:bg-[#12151B]/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Cute Brand Logo -->
+      <a href="#landing" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-400 via-rose-400 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-rose-400/25 group-hover:scale-110 group-hover:rotate-6 transition-transform text-lg">
+          ✨
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl font-black tracking-tight font-heading text-[#2B2823] dark:text-white">OUR JOBS</span>
+            <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300 border border-rose-200 dark:border-rose-800">BETA 💖</span>
+          </div>
+          <p class="text-[11px] text-[#8C8375] dark:text-slate-400 font-medium -mt-0.5">Your Placement Bestie 🌱</p>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-1 text-xs font-semibold">
+        <a href="#landing" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="home" class="w-3.5 h-3.5"></i>Home</span>
+        </a>
+        <a href="#jobs" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="briefcase" class="w-3.5 h-3.5"></i>Jobs & Internships</span>
+        </a>
+        <a href="#tracker" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="kanban" class="w-3.5 h-3.5"></i>Tracker</span>
+        </a>
+        <a href="#prep" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>Prep Hub</span>
+        </a>
+        <a href="#dsa" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="code-2" class="w-3.5 h-3.5"></i>DSA Sheet & IDE</span>
+        </a>
+        <a href="#aptitude" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="calculator" class="w-3.5 h-3.5"></i>Aptitude</span>
+        </a>
+        <a href="#technical" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="cpu" class="w-3.5 h-3.5"></i>Core CS</span>
+        </a>
+        <a href="#hr" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="mic" class="w-3.5 h-3.5"></i>HR Arena</span>
+        </a>
+        <a href="#companies" class="nav-item px-3 py-2 rounded-xl text-[#6B655B] dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-[#F3EFE8] dark:hover:bg-slate-800 transition">
+          <span class="flex items-center gap-1.5"><i data-lucide="building-2" class="w-3.5 h-3.5"></i>Companies</span>
+        </a>
+      </nav>
+
+      <!-- Right Utility Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Daily Streak Badge -->
+        <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 font-bold text-xs" title="Placement Preparation Streak">
+          <span>🔥</span>
+          <span id="streakCounter">7 Day Streak ✨</span>
+        </div>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button id="themeToggleBtn" aria-label="Toggle Theme" class="p-2 rounded-xl border border-[#ECE5DB] dark:border-[#2A3241] bg-white dark:bg-slate-800 hover:bg-[#F3EFE8] dark:hover:bg-slate-700 text-[#6B655B] dark:text-slate-300 transition">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-indigo-500"></i>
+        </button>
+
+        <!-- Student Profile Button -->
+        <a href="#profile" class="flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-full border border-[#ECE5DB] dark:border-[#2A3241] bg-white dark:bg-slate-800 hover:bg-[#F3EFE8] dark:hover:bg-slate-700 transition">
+          <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-rose-400 to-indigo-500 flex items-center justify-center text-white text-xs font-bold shadow-sm">
+            MS
+          </div>
+          <span class="text-xs font-bold hidden md:inline text-[#2B2823] dark:text-slate-200" id="profileNavName">Mukku (2025) 🎒</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0b0f19] px-4 py-4 space-y-1">
+      <a href="#landing" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
+      <a href="#jobs" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Jobs & Internships</a>
+      <a href="#tracker" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Application Tracker</a>
+      <a href="#prep" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Placement Prep</a>
+      <a href="#dsa" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">DSA Sheet & IDE</a>
+      <a href="#aptitude" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Aptitude</a>
+      <a href="#technical" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Core Technical (CS)</a>
+      <a href="#hr" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">HR Interview Arena</a>
+      <a href="#companies" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Company Roadmaps</a>
+      <a href="#profile" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">My Profile & Readiness</a>
+    </div>
+  </header>
+
+  <!-- Container for App Views -->
+  <main id="appContainer" class="min-h-[calc(100vh-4rem)]">
+
+    <!-- VIEW 1: LANDING PAGE -->
+    <section id="view-landing" class="app-view">
+      <!-- 1. Hero Section -->
+      <div class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-[#ECE5DB] dark:border-[#2A3241] hero-glow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-200 dark:border-rose-900/60 bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 text-xs font-bold mb-6 shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-rose-500 animate-ping"></span>
+            <span>✨ 2025 & 2026 Batch Campus Recruitment Season is Live! 🎒</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight font-heading text-[#2B2823] dark:text-white max-w-4xl mx-auto leading-[1.12]">
+            Your Career Starts Here.
+          </h1>
+
+          <p class="mt-6 text-lg sm:text-xl text-[#6B655B] dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Jobs. Internships. DSA. Aptitude. Interviews. <br class="hidden sm:inline" />
+            Everything you need to <span class="cute-highlight">crack your placement</span> without the stress.
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <a href="#jobs" class="cute-btn-primary px-8 py-3.5 rounded-2xl flex items-center gap-2 text-sm shadow-md">
+              <i data-lucide="compass" class="w-4 h-4"></i>
+              <span>Explore Fresh Jobs 💼</span>
+            </a>
+            <a href="#prep" class="cute-btn-secondary px-8 py-3.5 rounded-2xl flex items-center gap-2 text-sm shadow-sm">
+              <span>Start Practicing ✨</span>
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i>
+            </a>
+          </div>
+
+          <!-- Live Product Preview Card Mockup -->
+          <div class="mt-14 max-w-5xl mx-auto rounded-3xl border-2 border-[#ECE5DB] dark:border-[#2A3241] bg-white dark:bg-[#191E27] shadow-xl overflow-hidden text-left p-6 sm:p-8">
+            <div class="flex items-center justify-between pb-6 border-b border-[#ECE5DB] dark:border-[#2A3241]">
+              <div class="flex items-center gap-3">
+                <div class="flex gap-1.5">
+                  <div class="w-3.5 h-3.5 rounded-full bg-rose-400"></div>
+                  <div class="w-3.5 h-3.5 rounded-full bg-amber-400"></div>
+                  <div class="w-3.5 h-3.5 rounded-full bg-emerald-400"></div>
+                </div>
+                <span class="text-xs font-mono font-medium text-[#9C9488]">ourjobs.io 💖 • today's placement buddy</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 px-3 py-1 rounded-full">
+                <i data-lucide="activity" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Your Readiness: 88% 🌱</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+              <div class="p-4 rounded-2xl bg-rose-50/70 dark:bg-slate-800/50 border border-rose-100 dark:border-slate-700/60">
+                <div class="text-xs text-rose-800 dark:text-rose-300 font-bold flex items-center gap-1.5"><span>🎒</span> Fresher Openings</div>
+                <div class="text-2xl font-black font-heading text-[#2B2823] dark:text-white mt-1">1,420+</div>
+                <div class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> 48 added today</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-indigo-50/70 dark:bg-slate-800/50 border border-indigo-100 dark:border-slate-700/60">
+                <div class="text-xs text-indigo-800 dark:text-indigo-300 font-bold flex items-center gap-1.5"><span>💻</span> Curated DSA Sheet</div>
+                <div class="text-2xl font-black font-heading text-indigo-600 dark:text-indigo-400 mt-1">320 Problems</div>
+                <div class="text-xs text-[#8C8375] dark:text-slate-400 mt-1 font-medium">Striver & LeetCode SDE</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-slate-800/50 border border-amber-100 dark:border-slate-700/60">
+                <div class="text-xs text-amber-800 dark:text-amber-300 font-bold flex items-center gap-1.5"><span>🧮</span> Aptitude Suite</div>
+                <div class="text-2xl font-black font-heading text-amber-600 dark:text-amber-400 mt-1">4 Pillars</div>
+                <div class="text-xs text-[#8C8375] dark:text-slate-400 mt-1 font-medium">Quant, Logical, Verbal, DI</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-emerald-50/70 dark:bg-slate-800/50 border border-emerald-100 dark:border-slate-700/60">
+                <div class="text-xs text-emerald-800 dark:text-emerald-300 font-bold flex items-center gap-1.5"><span>🎯</span> Company Blueprints</div>
+                <div class="text-2xl font-black font-heading text-emerald-600 dark:text-emerald-400 mt-1">45+ Companies</div>
+                <div class="text-xs text-[#8C8375] dark:text-slate-400 mt-1 font-medium">Google, Amazon, TCS & more</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2. Featured Jobs Section -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Featured Fresher Jobs</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Direct recruitment drives for 2024, 2025 & 2026 graduates.</p>
+          </div>
+          <a href="#jobs" class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+            View all 1,420+ openings <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div id="landingFeaturedJobs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically Rendered -->
+        </div>
+      </section>
+
+      <!-- 3. Internship Opportunities Section -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+          <div>
+            <div class="badge-pill bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20 mb-2">Summer & Pre-final Year</div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">High-Stipend Internships</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Convert your summer into a Pre-Placement Offer (PPO).</p>
+          </div>
+          <button onclick="window.PlacifyApp.filterJobsByType('Internship')" class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+            Filter internships <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+        <div id="landingInternships" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically Rendered -->
+        </div>
+      </section>
+
+      <!-- 4. Placement Preparation Overview -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">The 4 Pillars of Placement Prep</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-2">Engineered strictly around the evaluation criteria of top product firms and mass recruitment tests.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="saas-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
+                <i data-lucide="calculator" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Aptitude Suite</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+                Quantitative, Logical, Verbal & Data Interpretation with formula cheat-sheets and timed placement mock tests.
+              </p>
+            </div>
+            <a href="#aptitude" class="mt-6 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+              Start Aptitude <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="saas-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">DSA Sheet & IDE</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+                Blind 75 & Striver's SDE sheet with an in-browser live code editor, multi-language support, test cases & editorials.
+              </p>
+            </div>
+            <a href="#dsa" class="mt-6 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+              Solve DSA <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="saas-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Core CS Subjects</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+                High-yield notes and top interview Q&A for OS, DBMS, Computer Networks, and OOPS with live SQL query challenges.
+              </p>
+            </div>
+            <a href="#technical" class="mt-6 text-xs font-semibold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1">
+              Revise Core CS <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="saas-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+                <i data-lucide="mic" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">HR & Behavioral Arena</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+                STAR framework answers, speech-to-text recording practice, AI evaluation metrics, and top 25 behavioral questions.
+              </p>
+            </div>
+            <a href="#hr" class="mt-6 text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
+              Practice HR <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 5. DSA Sheet Preview -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Handpicked SDE Coding Problems</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Practice coding directly in your browser with our built-in test runner.</p>
+          </div>
+          <a href="#dsa" class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition">
+            Launch Full IDE
+          </a>
+        </div>
+        <div id="landingDsaPreview" class="space-y-3">
+          <!-- Dynamically Rendered -->
+        </div>
+      </section>
+
+      <!-- 6. Company Hiring Processes -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Recruitment Blueprints by Company</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-2">Understand the exact test syllabus, round distribution, package breakdowns, and past interview questions.</p>
+        </div>
+        <div id="landingCompanyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Dynamically Rendered -->
+        </div>
+      </section>
+
+      <!-- 7. Student Progress Preview -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="saas-card p-8 lg:p-12 bg-gradient-to-br from-indigo-900/10 via-transparent to-purple-900/10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7">
+              <span class="badge-pill bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 mb-3">Instant Continuation</span>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Never lose your learning flow.</h2>
+              <p class="text-slate-600 dark:text-slate-300 mt-3 text-sm sm:text-base leading-relaxed">
+                OUR JOBS tracks every solved coding problem, aptitude quiz score, bookmarked opening, and job application stage. Open the platform anytime and resume learning exactly where you left off.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a href="#tracker" class="px-5 py-2.5 rounded-lg bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition flex items-center gap-1.5">
+                  <i data-lucide="kanban" class="w-4 h-4"></i> View Application Tracker
+                </a>
+                <a href="#profile" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1.5">
+                  <i data-lucide="pie-chart" class="w-4 h-4"></i> Check Placement Readiness
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-5 p-6 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 shadow-xl">
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Resume Learning</div>
+              <div class="font-bold text-slate-900 dark:text-white text-base" id="landingResumeTitle">Two Sum (Arrays & Hashing)</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Asked in Google, Amazon, Microsoft</div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full mt-4 overflow-hidden">
+                <div class="bg-indigo-600 h-full rounded-full" style="width: 65%;"></div>
+              </div>
+              <div class="flex justify-between items-center text-xs text-slate-400 mt-2">
+                <span>Problem Progress</span>
+                <span class="font-bold text-indigo-500">65% Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Why Choose OUR JOBS -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Why OUR JOBS beats scattered prep</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-2">Stop juggling 5 different tabs for jobs, coding, aptitude, and interview questions.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-slate-800">
+                <th class="py-4 px-6 font-semibold text-slate-400">Feature</th>
+                <th class="py-4 px-6 font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50/50 dark:bg-indigo-950/20 rounded-t-xl">OUR JOBS</th>
+                <th class="py-4 px-6 font-semibold text-slate-500">LeetCode</th>
+                <th class="py-4 px-6 font-semibold text-slate-500">GeeksforGeeks</th>
+                <th class="py-4 px-6 font-semibold text-slate-500">LinkedIn</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+              <tr>
+                <td class="py-3.5 px-6 font-medium">Fresher-Only Job & Internship Filtering</td>
+                <td class="py-3.5 px-6 font-bold text-emerald-500 bg-indigo-50/50 dark:bg-indigo-950/20">✅ Included</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ Cluttered</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ 3-5+ Yr Exp biased</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-6 font-medium">Built-in Kanban Application Tracker</td>
+                <td class="py-3.5 px-6 font-bold text-emerald-500 bg-indigo-50/50 dark:bg-indigo-950/20">✅ Included</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ Basic list only</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-6 font-medium">Complete Campus Aptitude Modules</td>
+                <td class="py-3.5 px-6 font-bold text-emerald-500 bg-indigo-50/50 dark:bg-indigo-950/20">✅ 4 Pillars with Tests</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No Aptitude</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ Ad-heavy pages</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-6 font-medium">Company-wise Exam Pattern & Syllabi</td>
+                <td class="py-3.5 px-6 font-bold text-emerald-500 bg-indigo-50/50 dark:bg-indigo-950/20">✅ Curated Guides</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ Premium only</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ Scattered</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-6 font-medium">Live Code IDE with Test Runner</td>
+                <td class="py-3.5 px-6 font-bold text-emerald-500 bg-indigo-50/50 dark:bg-indigo-950/20">✅ Included In-Browser</td>
+                <td class="py-3.5 px-6 text-emerald-500">✅ Yes</td>
+                <td class="py-3.5 px-6 text-emerald-500">✅ Yes</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-6 font-medium">Interactive HR Practice & STAR Guide</td>
+                <td class="py-3.5 px-6 font-bold text-emerald-500 bg-indigo-50/50 dark:bg-indigo-950/20">✅ Voice & Text Arena</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+                <td class="py-3.5 px-6 text-slate-400">⚠️ Static text only</td>
+                <td class="py-3.5 px-6 text-slate-400">❌ No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 9. Testimonials -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Placed Students Love OUR JOBS</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-2">Real freshers who cracked top offers using our all-in-one preparation engine.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="saas-card p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                AR
+              </div>
+              <div>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">Aarav Sharma</div>
+                <div class="text-xs text-indigo-500 font-semibold">SDE-1 at Amazon (₹32 LPA)</div>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+              "The DSA sheet combined with the company-wise hiring roadmaps saved me 4 months of confusion. Having the code runner and Amazon Leadership Principle STAR answers in one spot made all the difference."
+            </p>
+          </div>
+          <div class="saas-card p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-sm">
+                PS
+              </div>
+              <div>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">Pooja Sundaram</div>
+                <div class="text-xs text-emerald-500 font-semibold">TCS Digital & Microsoft Intern</div>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+              "Aptitude was always my weak spot during online assessment rounds. The timed test mode with instant step-by-step mathematical explanations helped me clear TCS NQT Digital and Accenture on my first attempt!"
+            </p>
+          </div>
+          <div class="saas-card p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">
+                RV
+              </div>
+              <div>
+                <div class="font-bold text-sm text-slate-900 dark:text-white">Rohan Verma</div>
+                <div class="text-xs text-purple-500 font-semibold">Associate SDE at Flipkart (₹22 LPA)</div>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
+              "The Application Tracker Kanban kept my 25+ campus and off-campus applications perfectly organized. No missed assessment links, no lost deadlines. Truly the cleanest fresher platform ever."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Call-to-Action -->
+      <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="saas-card p-10 sm:p-16 bg-gradient-to-r from-indigo-900 via-indigo-950 to-purple-900 text-white relative overflow-hidden">
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to Crack Your Dream Placement?</h2>
+            <p class="mt-4 text-indigo-200 text-sm sm:text-base">
+              Join thousands of engineering students preparing smarter, practicing faster, and securing top fresher offers.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+              <a href="#dsa" class="px-8 py-3.5 rounded-xl bg-white text-indigo-900 font-bold hover:bg-slate-100 transition shadow-lg">
+                Solve Your First Problem
+              </a>
+              <a href="#jobs" class="px-8 py-3.5 rounded-xl border border-white/30 text-white font-semibold hover:bg-white/10 transition">
+                Browse Fresher Drives
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. Footer -->
+      <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0b0f19] py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-6 h-6 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-xs font-bold">OJ</div>
+                <span class="font-bold text-slate-900 dark:text-white">OUR JOBS</span>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                The all-in-one placement preparation and job portal designed exclusively for college students and freshers.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3">Opportunities</h4>
+              <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                <li><a href="#jobs" class="hover:text-indigo-500">Software Developer Jobs</a></li>
+                <li><a href="#jobs" class="hover:text-indigo-500">Summer 2026 Internships</a></li>
+                <li><a href="#jobs" class="hover:text-indigo-500">Remote Fresher Roles</a></li>
+                <li><a href="#jobs" class="hover:text-indigo-500">TCS Digital Drives</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3">Preparation</h4>
+              <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                <li><a href="#dsa" class="hover:text-indigo-500">DSA Sheet & In-Browser IDE</a></li>
+                <li><a href="#aptitude" class="hover:text-indigo-500">Quantitative Aptitude</a></li>
+                <li><a href="#technical" class="hover:text-indigo-500">Core CS Fundamentals (OS/DBMS)</a></li>
+                <li><a href="#hr" class="hover:text-indigo-500">STAR HR Mock Practice</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-3">Companies</h4>
+              <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                <li><a href="#companies" class="hover:text-indigo-500">Google Hiring Process</a></li>
+                <li><a href="#companies" class="hover:text-indigo-500">Amazon SDE-1 Syllabus</a></li>
+                <li><a href="#companies" class="hover:text-indigo-500">TCS NQT Blueprint</a></li>
+                <li><a href="#companies" class="hover:text-indigo-500">Infosys Specialist Programmer</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+            <p>© 2026 OUR JOBS EdTech & Career Systems. All rights reserved.</p>
+            <p>Empowering 2024, 2025, 2026 & 2027 Engineering Batches.</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- VIEW 2: JOB & INTERNSHIP PORTAL -->
+    <section id="view-jobs" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Jobs Header & Search -->
+      <div class="mb-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Discover Fresher Opportunities</h1>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Verified full-time drives and internships for 2024-2027 batches.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-500 dark:text-slate-400">Sort by:</span>
+            <select id="jobSortSelect" class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs rounded-lg px-3 py-2 text-slate-800 dark:text-slate-200 focus:outline-none">
+              <option value="newest">Newest First</option>
+              <option value="salary">Highest Package</option>
+              <option value="company">Company Name</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Search Bar with Filters -->
+        <div class="saas-card p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400"></i>
+            <input type="text" id="jobSearchInput" placeholder="Search by role, company name, or tech stack (e.g. Java, React, Google)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <select id="filterTypeSelect" class="bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700 text-xs rounded-xl px-3 py-2.5 text-slate-800 dark:text-slate-200 focus:outline-none">
+              <option value="all">All Types (Job & Internship)</option>
+              <option value="Full-time">Full-time Only</option>
+              <option value="Internship">Internship Only</option>
+            </select>
+            <select id="filterWorkModeSelect" class="bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700 text-xs rounded-xl px-3 py-2.5 text-slate-800 dark:text-slate-200 focus:outline-none">
+              <option value="all">All Modes</option>
+              <option value="Remote">Remote</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="On-site">On-site</option>
+            </select>
+            <button id="resetJobFiltersBtn" class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold text-slate-600 dark:text-slate-300">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Role Categories Horizontal Scrollable Pills -->
+        <div class="mt-4 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar" id="jobCategoryPills">
+          <!-- Dynamically populated categories -->
+        </div>
+      </div>
+
+      <!-- Jobs Grid -->
+      <div id="jobsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamically Rendered Job Cards -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="jobsEmptyState" class="hidden text-center py-16">
+        <i data-lucide="inbox" class="w-12 h-12 text-slate-400 mx-auto mb-3"></i>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">No opportunities matched your filters</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Try resetting your search query or selecting a broader role category.</p>
+      </div>
+    </section>
+
+    <!-- VIEW 3: APPLICATION TRACKER (KANBAN) -->
+    <section id="view-tracker" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Application Tracker</h1>
+            <span class="badge-pill bg-indigo-500/10 text-indigo-500 border border-indigo-500/20" id="totalAppsBadge">0 Total</span>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Manage your placement pipeline from bookmarking to final offer letter.</p>
+        </div>
+        <button id="addNewAppBtn" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs flex items-center gap-2 shadow-sm transition">
+          <i data-lucide="plus" class="w-4 h-4"></i> Add Application
+        </button>
+      </div>
+
+      <!-- Kanban Pipeline Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 overflow-x-auto pb-6">
+        
+        <!-- Col 1: Saved -->
+        <div class="kanban-col p-3 flex flex-col" data-stage="saved">
+          <div class="flex items-center justify-between mb-3 px-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-slate-400"></span> Saved
+            </span>
+            <span class="kanban-count text-[11px] font-bold px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">0</span>
+          </div>
+          <div class="kanban-dropzone space-y-3 flex-1 overflow-y-auto max-h-[70vh]" id="kanban-saved"></div>
+        </div>
+
+        <!-- Col 2: Applied -->
+        <div class="kanban-col p-3 flex flex-col" data-stage="applied">
+          <div class="flex items-center justify-between mb-3 px-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-500 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span> Applied
+            </span>
+            <span class="kanban-count text-[11px] font-bold px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">0</span>
+          </div>
+          <div class="kanban-dropzone space-y-3 flex-1 overflow-y-auto max-h-[70vh]" id="kanban-applied"></div>
+        </div>
+
+        <!-- Col 3: Assessment -->
+        <div class="kanban-col p-3 flex flex-col" data-stage="assessment">
+          <div class="flex items-center justify-between mb-3 px-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-500 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span> Assessment
+            </span>
+            <span class="kanban-count text-[11px] font-bold px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">0</span>
+          </div>
+          <div class="kanban-dropzone space-y-3 flex-1 overflow-y-auto max-h-[70vh]" id="kanban-assessment"></div>
+        </div>
+
+        <!-- Col 4: Interview -->
+        <div class="kanban-col p-3 flex flex-col" data-stage="interview">
+          <div class="flex items-center justify-between mb-3 px-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-500 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-purple-500"></span> Interview
+            </span>
+            <span class="kanban-count text-[11px] font-bold px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">0</span>
+          </div>
+          <div class="kanban-dropzone space-y-3 flex-1 overflow-y-auto max-h-[70vh]" id="kanban-interview"></div>
+        </div>
+
+        <!-- Col 5: Selected / Offer -->
+        <div class="kanban-col p-3 flex flex-col" data-stage="offer">
+          <div class="flex items-center justify-between mb-3 px-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-500 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Offer 🎉
+            </span>
+            <span class="kanban-count text-[11px] font-bold px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">0</span>
+          </div>
+          <div class="kanban-dropzone space-y-3 flex-1 overflow-y-auto max-h-[70vh]" id="kanban-offer"></div>
+        </div>
+
+        <!-- Col 6: Rejected -->
+        <div class="kanban-col p-3 flex flex-col" data-stage="rejected">
+          <div class="flex items-center justify-between mb-3 px-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-rose-500"></span> Rejected
+            </span>
+            <span class="kanban-count text-[11px] font-bold px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300">0</span>
+          </div>
+          <div class="kanban-dropzone space-y-3 flex-1 overflow-y-auto max-h-[70vh]" id="kanban-rejected"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIEW 4: PLACEMENT PREPARATION HUB -->
+    <section id="view-prep" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Prep Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Placement Preparation Hub</h1>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Track your readiness and systematically master every stage of the placement selection process.</p>
+      </div>
+
+      <!-- Resume Learning Banner -->
+      <div class="saas-card p-6 bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-transparent border-indigo-500/20 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
+            <i data-lucide="play" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-500">Pick up right where you left off</div>
+            <div class="text-lg font-bold text-slate-900 dark:text-white mt-0.5" id="resumeHubTitle">Percentages & Profit/Loss Formulas</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Quantitative Aptitude • Section 1 of 4</div>
+          </div>
+        </div>
+        <a href="#aptitude" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
+          Continue Learning
+        </a>
+      </div>
+
+      <!-- 4 Core Prep Modules Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        
+        <!-- Module 1: Aptitude -->
+        <div class="saas-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
+                <i data-lucide="calculator" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Aptitude Mastery</h3>
+                <span class="text-xs text-slate-400">4 Categories • 25+ Topics</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-blue-500 bg-blue-500/10 px-2.5 py-1 rounded-full">Round 1 Filter</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+            Formulas, shortcut tricks, and timed test simulations for Quantitative Aptitude, Logical Reasoning, Verbal Ability, and Data Interpretation.
+          </p>
+          <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-slate-400">Module Progress: <strong class="text-slate-800 dark:text-slate-200" id="aptitudeProgressPct">45%</strong></span>
+            <a href="#aptitude" class="font-semibold text-blue-500 hover:underline flex items-center gap-1">
+              Open Aptitude Suite <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Module 2: DSA -->
+        <div class="saas-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center">
+                <i data-lucide="code-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">DSA Sheet & IDE</h3>
+                <span class="text-xs text-slate-400">Arrays to Dynamic Programming</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-indigo-500 bg-indigo-500/10 px-2.5 py-1 rounded-full">Core Coding</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+            Solve top placement interview coding questions with live JavaScript test runner, test cases, hints, and optimal editorial solutions in C++, Java, Python, and JS.
+          </p>
+          <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-slate-400">Solved: <strong class="text-slate-800 dark:text-slate-200" id="dsaProgressCount">0 / 8 Solved</strong></span>
+            <a href="#dsa" class="font-semibold text-indigo-500 hover:underline flex items-center gap-1">
+              Launch Code IDE <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Module 3: Core CS -->
+        <div class="saas-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">Core CS Subjects</h3>
+                <span class="text-xs text-slate-400">OS, DBMS, CN, OOPS</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-purple-500 bg-purple-500/10 px-2.5 py-1 rounded-full">Technical Rounds</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+            High-yield crash notes, top 25 interview questions with model answers, interactive quizzes, and live SQL challenge simulations.
+          </p>
+          <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-slate-400">4 Subjects Ready</span>
+            <a href="#technical" class="font-semibold text-purple-500 hover:underline flex items-center gap-1">
+              Review Subjects <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Module 4: HR & Behavioral -->
+        <div class="saas-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                <i data-lucide="mic" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-base text-slate-900 dark:text-white">HR Interview Arena</h3>
+                <span class="text-xs text-slate-400">STAR Method & Mock Practice</span>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-emerald-500 bg-emerald-500/10 px-2.5 py-1 rounded-full">Final Round</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+            Master behavioral questions, learn ideal response structures, practice with real-time speech-to-text recording, and avoid common candidate red flags.
+          </p>
+          <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-100 dark:border-slate-800">
+            <span class="text-slate-400">Voice Arena Active</span>
+            <a href="#hr" class="font-semibold text-emerald-500 hover:underline flex items-center gap-1">
+              Enter HR Arena <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VIEW 5: DEDICATED DSA SHEET & CODE RUNNER IDE -->
+    <section id="view-dsa" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- DSA Sheet View -->
+      <div id="dsaSheetContainer">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+          <div>
+            <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Curated Placement DSA Sheet</h1>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">High-frequency coding problems asked in Google, Amazon, Microsoft, and TCS Digital.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs text-slate-500 dark:text-slate-400">Filter Difficulty:</span>
+            <select id="dsaDifficultyFilter" class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs rounded-lg px-3 py-2 text-slate-800 dark:text-slate-200 focus:outline-none">
+              <option value="all">All Difficulties</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Topics horizontal filter pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar" id="dsaTopicPills">
+          <button class="dsa-topic-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-600 text-white" data-topic="all">All Topics</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Arrays & Hashing">Arrays & Hashing</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Strings">Strings</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Two Pointers & Sliding Window">Two Pointers</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Stacks & Queues">Stacks & Queues</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Binary Trees & BST">Binary Trees</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Graphs">Graphs</button>
+          <button class="dsa-topic-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-topic="Dynamic Programming">Dynamic Programming</button>
+        </div>
+
+        <!-- Problem Table -->
+        <div class="saas-card overflow-hidden mt-4">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-400 bg-slate-50 dark:bg-slate-800/40">
+                <th class="py-3.5 px-4 w-12 text-center">Status</th>
+                <th class="py-3.5 px-4">Problem Title</th>
+                <th class="py-3.5 px-4">Category</th>
+                <th class="py-3.5 px-4">Difficulty</th>
+                <th class="py-3.5 px-4">Top Companies</th>
+                <th class="py-3.5 px-4 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="dsaProblemTableBody" class="divide-y divide-slate-100 dark:divide-slate-800 text-sm">
+              <!-- Dynamically Rendered -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Problem Solver & Live Code IDE (Opened when a problem is selected) -->
+      <div id="dsaIdeContainer" class="hidden mt-4">
+        <!-- Back bar -->
+        <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800 mb-4">
+          <button id="closeIdeBtn" class="flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-indigo-600 dark:hover:text-white transition">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i> Back to DSA Sheet
+          </button>
+          <div class="flex items-center gap-3">
+            <button id="bookmarkProblemBtn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-amber-500 transition" title="Save Problem">
+              <i data-lucide="bookmark" class="w-4 h-4"></i>
+            </button>
+            <div id="ideStatusBadge" class="badge-pill bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+              Not Solved
+            </div>
+          </div>
+        </div>
+
+        <!-- Split Pane: Problem vs Code IDE -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[650px]">
+          
+          <!-- Left: Problem Description, Examples, Hints, Editorial -->
+          <div class="lg:col-span-5 saas-card p-6 flex flex-col h-[750px] overflow-hidden">
+            <!-- Tabs -->
+            <div class="flex border-b border-slate-200 dark:border-slate-700 pb-3 gap-4 text-xs font-bold">
+              <button class="ide-tab-btn active text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 pb-1" data-tab="desc">
+                Description
+              </button>
+              <button class="ide-tab-btn text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 pb-1" data-tab="hints">
+                Hints
+              </button>
+              <button class="ide-tab-btn text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 pb-1" data-tab="editorial">
+                Editorial & Solutions
+              </button>
+            </div>
+
+            <!-- Tab 1: Description -->
+            <div id="ideTabDesc" class="ide-tab-content flex-1 overflow-y-auto pt-4 space-y-4 pr-1">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <h2 class="text-xl font-bold text-slate-900 dark:text-white" id="ideProblemTitle">Two Sum</h2>
+                  <span id="ideDifficultyBadge" class="badge-pill bg-emerald-500/10 text-emerald-500">Easy</span>
+                </div>
+                <div class="flex flex-wrap gap-1.5 mt-2" id="ideCompaniesPills"></div>
+              </div>
+
+              <div class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line" id="ideProblemText"></div>
+
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Examples</h4>
+                <div class="space-y-2.5" id="ideExamplesList"></div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Constraints</h4>
+                <ul class="list-disc list-inside text-xs text-slate-500 dark:text-slate-400 space-y-1 font-mono" id="ideConstraintsList"></ul>
+              </div>
+            </div>
+
+            <!-- Tab 2: Hints -->
+            <div id="ideTabHints" class="ide-tab-content hidden flex-1 overflow-y-auto pt-4 space-y-3">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Hints & Clues</h4>
+              <div id="ideHintsList" class="space-y-3"></div>
+            </div>
+
+            <!-- Tab 3: Editorial -->
+            <div id="ideTabEditorial" class="ide-tab-content hidden flex-1 overflow-y-auto pt-4 space-y-4">
+              <div id="ideEditorialContent"></div>
+            </div>
+
+          </div>
+
+          <!-- Right: Code Editor, Language Selector, Test Runner -->
+          <div class="lg:col-span-7 saas-card p-6 flex flex-col h-[750px] bg-slate-900 text-slate-100 border-slate-800">
+            
+            <!-- Editor Controls -->
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-400 font-semibold">Language:</span>
+                <select id="ideLanguageSelect" class="bg-slate-800 border border-slate-700 text-xs rounded-lg px-2.5 py-1 text-slate-200 focus:outline-none font-mono">
+                  <option value="javascript">JavaScript (ES6)</option>
+                  <option value="python">Python 3</option>
+                  <option value="java">Java 17</option>
+                  <option value="cpp">C++ 20</option>
+                </select>
+              </div>
+              <div class="flex items-center gap-2">
+                <button id="resetCodeBtn" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-semibold transition" title="Reset starter code">
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <!-- Editor Input -->
+            <div class="flex-1 my-3 relative rounded-lg overflow-hidden border border-slate-800">
+              <textarea id="ideCodeEditor" spellcheck="false" class="code-editor-area w-full h-full p-4 bg-[#090d16] text-slate-200 text-xs font-mono resize-none focus:outline-none"></textarea>
+            </div>
+
+            <!-- Console / Test Results Output -->
+            <div class="h-44 border-t border-slate-800 pt-3 flex flex-col">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-slate-400 flex items-center gap-1.5">
+                  <i data-lucide="terminal" class="w-3.5 h-3.5"></i> Test Execution Console
+                </span>
+                <div class="flex items-center gap-2">
+                  <button id="runCodeBtn" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i data-lucide="play" class="w-3 h-3 text-emerald-400"></i> Run Code
+                  </button>
+                  <button id="submitSolutionBtn" class="px-4 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold flex items-center gap-1.5 transition">
+                    <i data-lucide="check-circle-2" class="w-3 h-3"></i> Submit Solution
+                  </button>
+                </div>
+              </div>
+
+              <!-- Output Box -->
+              <div id="ideConsoleOutput" class="flex-1 bg-[#090d16] rounded-lg p-3 font-mono text-xs overflow-y-auto border border-slate-800/80 text-slate-300">
+                <span class="text-slate-500">Run code against test cases to see execution output...</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- VIEW 6: DEDICATED APTITUDE PREPARATION -->
+    <section id="view-aptitude" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Aptitude Preparation Suite</h1>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Crack Quantitative, Logical, Verbal, and Data Interpretation assessment rounds.</p>
+      </div>
+
+      <!-- Category Switcher Tabs -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8" id="aptitudeCategoryCards">
+        <!-- Dynamically Rendered -->
+      </div>
+
+      <!-- Main Topic Workspace -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left Topic List Sidebar -->
+        <div class="lg:col-span-4 saas-card p-4 h-[600px] flex flex-col">
+          <div class="font-bold text-sm text-slate-900 dark:text-white mb-3 px-2 flex items-center justify-between">
+            <span id="activeAptCategoryTitle">Quantitative Aptitude</span>
+            <span class="text-xs text-slate-400" id="topicCountBadge">Topics</span>
+          </div>
+          <div class="flex-1 overflow-y-auto space-y-1.5 pr-1" id="aptitudeTopicList">
+            <!-- Dynamically Rendered -->
+          </div>
+        </div>
+
+        <!-- Right: Topic Engine (Learn -> Practice -> Test) -->
+        <div class="lg:col-span-8 saas-card p-6 flex flex-col h-[600px]">
+          
+          <!-- Mode Tabs -->
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">
+            <div class="flex gap-2">
+              <button class="apt-mode-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white" data-mode="learn">
+                📖 Learn & Formulas
+              </button>
+              <button class="apt-mode-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-mode="practice">
+                ✍️ Practice (Interactive)
+              </button>
+              <button class="apt-mode-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-mode="test">
+                ⏱️ Timed Placement Test
+              </button>
+            </div>
+            <span id="activeTopicDifficulty" class="badge-pill bg-emerald-500/10 text-emerald-500 text-[11px]">Easy</span>
+          </div>
+
+          <!-- Content Mode 1: Learn -->
+          <div id="aptModeLearn" class="apt-content-mode flex-1 overflow-y-auto space-y-4 pr-1">
+            <div class="border-b border-slate-100 dark:border-slate-800 pb-3">
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white" id="learnTopicName">Percentages</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Key formulas, fraction equivalents, and shortcut derivation rules.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Essential Formulas</h3>
+              <div id="learnFormulasContainer" class="space-y-2"></div>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Pro Tips & Shortcuts</h3>
+              <ul id="learnNotesContainer" class="space-y-2 text-xs text-slate-600 dark:text-slate-300 list-disc list-inside"></ul>
+            </div>
+          </div>
+
+          <!-- Content Mode 2: Practice -->
+          <div id="aptModePractice" class="apt-content-mode hidden flex-1 overflow-y-auto space-y-4 pr-1">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div>
+                <span class="text-xs text-indigo-500 font-bold uppercase tracking-wider">Practice Question</span>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white" id="practiceQuestionTitle">Question 1</h3>
+              </div>
+              <button id="showAptHintBtn" class="text-xs font-semibold text-amber-500 bg-amber-500/10 px-3 py-1.5 rounded-lg border border-amber-500/20 hover:bg-amber-500/20 transition">
+                💡 Show Hint
+              </button>
+            </div>
+
+            <div id="practiceHintBox" class="hidden p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 text-xs"></div>
+
+            <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium" id="practiceQuestionText"></p>
+
+            <div class="space-y-2 pt-2" id="practiceOptionsList"></div>
+
+            <div id="practiceExplanationBox" class="hidden p-4 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs leading-relaxed">
+              <span class="font-bold text-emerald-500 block mb-1">Step-by-Step Mathematical Explanation:</span>
+              <p id="practiceExplanationText" class="text-slate-700 dark:text-slate-300"></p>
+            </div>
+
+            <div class="flex justify-between items-center pt-3 border-t border-slate-100 dark:border-slate-800">
+              <button id="prevPracticeBtn" class="px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-600 dark:text-slate-300">Previous</button>
+              <button id="nextPracticeBtn" class="px-4 py-1.5 rounded bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition">Next Question</button>
+            </div>
+          </div>
+
+          <!-- Content Mode 3: Timed Placement Test -->
+          <div id="aptModeTest" class="apt-content-mode hidden flex-1 flex flex-col">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+              <div>
+                <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">Placement Simulation Test</span>
+                <div class="text-xs text-slate-400">Marking: +1 correct, -0.25 negative</div>
+              </div>
+              <div class="flex items-center gap-2 font-mono text-sm font-bold text-indigo-500 bg-indigo-500/10 px-3 py-1.5 rounded-lg border border-indigo-500/20">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+                <span id="testTimerDisplay">10:00</span>
+              </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto py-4 space-y-4" id="aptTestQuestionArea">
+              <!-- Rendered Test Questions -->
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+              <span class="text-xs text-slate-400" id="testAnsweredCount">0 of 3 Answered</span>
+              <button id="submitAptTestBtn" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition">
+                Submit Test & View Score
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VIEW 7: CORE TECHNICAL (CS) SUBJECTS -->
+    <section id="view-technical" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Core Computer Science Subjects</h1>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">High-yield revision notes, top 25 interview questions, and interactive SQL query runner.</p>
+      </div>
+
+      <!-- Subject Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar" id="technicalSubjectTabs">
+        <!-- Dynamically Rendered -->
+      </div>
+
+      <!-- Subject Content Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-2">
+        
+        <!-- Left: Revision Notes & Mindmaps -->
+        <div class="lg:col-span-6 saas-card p-6 h-[650px] overflow-y-auto">
+          <div class="flex items-center justify-between mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="book-marked" class="w-4 h-4 text-indigo-500"></i> High-Yield Revision Notes
+            </h3>
+            <span class="badge-pill bg-indigo-500/10 text-indigo-500 text-xs" id="techSubjectBadge">Core</span>
+          </div>
+          <div id="techNotesList" class="space-y-4"></div>
+        </div>
+
+        <!-- Right: Top Interview Q&As & Live Challenges -->
+        <div class="lg:col-span-6 saas-card p-6 h-[650px] overflow-y-auto flex flex-col">
+          <div class="flex items-center justify-between mb-4 pb-2 border-b border-slate-100 dark:border-slate-800">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-emerald-500"></i> Top Interview Q&As
+            </h3>
+            <span class="text-xs text-slate-400">Click to expand answer</span>
+          </div>
+          <div id="techQaList" class="space-y-3 flex-1 overflow-y-auto pr-1"></div>
+
+          <!-- Live SQL Sandbox Section (for DBMS) -->
+          <div id="sqlSandboxSection" class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 hidden">
+            <div class="font-bold text-xs uppercase tracking-wider text-amber-500 mb-2 flex items-center gap-1.5">
+              <i data-lucide="database" class="w-3.5 h-3.5"></i> Live SQL Challenge
+            </div>
+            <div class="text-xs text-slate-600 dark:text-slate-300 font-medium mb-2" id="sqlChallengeTitle">Find 2nd Highest Salary</div>
+            <div class="p-2.5 rounded-lg bg-slate-900 font-mono text-[11px] text-emerald-400 mb-2" id="sqlChallengeCode"></div>
+            <button id="runSqlBtn" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
+              Verify SQL Query
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VIEW 8: HR & BEHAVIORAL INTERVIEW ARENA -->
+    <section id="view-hr" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">HR & Behavioral Interview Arena</h1>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Master the STAR framework and practice your answers with our interactive voice/text evaluation simulator.</p>
+      </div>
+
+      <!-- STAR Framework Banner -->
+      <div class="saas-card p-6 bg-gradient-to-r from-emerald-600/10 via-indigo-600/10 to-transparent border-emerald-500/20 mb-8">
+        <h2 class="font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+          <span>The S-T-A-R Response Framework</span>
+        </h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">The proven method evaluated by Google, Amazon, and Fortune 500 recruiters.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-6">
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+            <span class="text-xs font-extrabold text-indigo-500 bg-indigo-500/10 px-2 py-0.5 rounded">S - Situation (15%)</span>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">Describe the specific context, project, or problem you faced.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+            <span class="text-xs font-extrabold text-blue-500 bg-blue-500/10 px-2 py-0.5 rounded">T - Task (15%)</span>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">Explain your concrete responsibility and what goal was required.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+            <span class="text-xs font-extrabold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">A - Action (50%)</span>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">Detail the specific steps YOU took, tools chosen, and decisions made.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+            <span class="text-xs font-extrabold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">R - Result (20%)</span>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">Quantify outcomes, metrics improved, delivery dates, and takeaways.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HR Interactive Practice Arena -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left Question Selector -->
+        <div class="lg:col-span-5 saas-card p-5 h-[650px] flex flex-col">
+          <div class="font-bold text-sm text-slate-900 dark:text-white mb-3 px-1">
+            Top 25 HR & Behavioral Questions
+          </div>
+          <div class="flex-1 overflow-y-auto space-y-2 pr-1" id="hrQuestionsList"></div>
+        </div>
+
+        <!-- Right Practice Terminal -->
+        <div class="lg:col-span-7 saas-card p-6 h-[650px] flex flex-col overflow-y-auto">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800 mb-4">
+            <span class="badge-pill bg-indigo-500/10 text-indigo-500 text-xs" id="hrCategoryBadge">Personal & Introduction</span>
+            <span class="text-xs text-slate-400" id="hrFrequencyBadge">Asked in 100% of Interviews</span>
+          </div>
+
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2" id="hrActiveQuestionTitle">Tell me about yourself.</h2>
+          
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 mb-4 text-xs text-slate-600 dark:text-slate-300">
+            <span class="font-bold text-slate-900 dark:text-white block mb-0.5">What the Interviewer is evaluating:</span>
+            <span id="hrInterviewerWants">A structured 90-second elevator pitch connecting academics and projects.</span>
+          </div>
+
+          <!-- Answer Mode Tabs -->
+          <div class="flex gap-2 border-b border-slate-200 dark:border-slate-700 pb-2 mb-4 text-xs font-semibold">
+            <button class="hr-tab-btn active text-indigo-600 dark:text-indigo-400" data-view="practice">
+              🎙️ Interactive Practice
+            </button>
+            <button class="hr-tab-btn text-slate-500 hover:text-slate-800 dark:hover:text-slate-200" data-view="model">
+              🌟 Model STAR Answer
+            </button>
+            <button class="hr-tab-btn text-slate-500 hover:text-slate-800 dark:hover:text-slate-200" data-view="dos">
+              ⚖️ Do's and Don'ts
+            </button>
+          </div>
+
+          <!-- Practice View -->
+          <div id="hrViewPractice" class="hr-tab-panel flex-1 flex flex-col space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-slate-400">Type or dictate your answer:</span>
+              <button id="voiceRecordBtn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-500/10 text-rose-500 border border-rose-500/20 hover:bg-rose-500/20 transition font-semibold">
+                <i data-lucide="mic" class="w-3.5 h-3.5"></i> <span id="recordBtnText">Start Speech-to-Text</span>
+              </button>
+            </div>
+            <textarea id="hrAnswerInput" placeholder="Deliver your answer here or click Start Speech-to-Text to record using your microphone..." class="w-full h-40 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+
+            <button id="evaluateHrAnswerBtn" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Evaluate My Response
+            </button>
+
+            <!-- Feedback Scorecard -->
+            <div id="hrFeedbackCard" class="hidden p-4 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-900 dark:text-white">AI Evaluation Scorecard</span>
+                <span class="font-bold text-emerald-500" id="hrScoreText">8.5 / 10</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed" id="hrFeedbackComments"></p>
+            </div>
+          </div>
+
+          <!-- Model Answer View -->
+          <div id="hrViewModel" class="hr-tab-panel hidden flex-1 space-y-3 text-xs leading-relaxed text-slate-700 dark:text-slate-300">
+            <div class="p-4 rounded-xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-200 dark:border-indigo-800/50 whitespace-pre-line font-medium" id="hrModelAnswerText"></div>
+          </div>
+
+          <!-- Dos and Donts View -->
+          <div id="hrViewDos" class="hr-tab-panel hidden flex-1 space-y-4 text-xs">
+            <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+              <span class="font-bold text-emerald-600 dark:text-emerald-400 block mb-2">✅ What to Do:</span>
+              <ul class="space-y-1.5 text-slate-700 dark:text-slate-300 list-disc list-inside" id="hrDosList"></ul>
+            </div>
+            <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20">
+              <span class="font-bold text-rose-600 dark:text-rose-400 block mb-2">❌ Red Flags to Avoid:</span>
+              <ul class="space-y-1.5 text-slate-700 dark:text-slate-300 list-disc list-inside" id="hrDontsList"></ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VIEW 9: COMPANY-WISE HIRING PROCESSES & ROADMAPS -->
+    <section id="view-companies" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Company Hiring Blueprints & Roadmaps</h1>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Deep dive into packages, eligibility criteria, exam patterns, and 30-day preparation roadmaps.</p>
+      </div>
+
+      <!-- Companies Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="companyHubGrid">
+        <!-- Dynamically Rendered -->
+      </div>
+
+    </section>
+
+    <!-- VIEW 10: STUDENT PROFILE & PLACEMENT READINESS -->
+    <section id="view-profile" class="app-view hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <div class="mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white">Student Profile & Readiness Dashboard</h1>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Real-time placement preparedness analytics calculated across all preparation pillars.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left: Student Details Card -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="saas-card p-6 text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-lg shadow-indigo-500/20">
+              MS
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white" id="profileFullName">Mukund Sharma</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Computer Science & Engineering • 2025 Batch</p>
+            <div class="badge-pill bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 mt-3">
+              Aiming for: Product & Fintech SDE
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 text-left">
+              <div>
+                <span class="text-[11px] text-slate-400 font-medium">College CGPA</span>
+                <div class="text-sm font-bold text-slate-900 dark:text-white">8.6 / 10.0</div>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-400 font-medium">Coding Language</span>
+                <div class="text-sm font-bold text-indigo-500">C++ / Java</div>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-400 font-medium">Problems Solved</span>
+                <div class="text-sm font-bold text-emerald-500" id="profileSolvedCount">0 / 8</div>
+              </div>
+              <div>
+                <span class="text-[11px] text-slate-400 font-medium">Applications</span>
+                <div class="text-sm font-bold text-purple-500" id="profileAppsCount">0 Tracked</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Streak Card -->
+          <div class="saas-card p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Preparation Streak</span>
+              <span class="text-xs font-bold text-amber-500">🔥 7 Days</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">You've solved problems and revised notes 7 days in a row! Keep up the momentum.</p>
+            <!-- 7-day mini heatmap -->
+            <div class="grid grid-cols-7 gap-2 text-center text-[10px] text-slate-400">
+              <div><div class="h-6 rounded bg-emerald-500/80 mb-1"></div>M</div>
+              <div><div class="h-6 rounded bg-emerald-500/80 mb-1"></div>T</div>
+              <div><div class="h-6 rounded bg-emerald-500/80 mb-1"></div>W</div>
+              <div><div class="h-6 rounded bg-emerald-500/80 mb-1"></div>T</div>
+              <div><div class="h-6 rounded bg-emerald-500/80 mb-1"></div>F</div>
+              <div><div class="h-6 rounded bg-emerald-500/80 mb-1"></div>S</div>
+              <div><div class="h-6 rounded bg-emerald-500 mb-1 animate-pulse"></div>S</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Readiness Radar & Breakdown -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <div class="saas-card p-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Placement Readiness Score</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Weighted score across DSA, Aptitude, Core CS, and HR Interview readiness.</p>
+              </div>
+              <div class="text-right">
+                <span class="text-3xl font-black text-indigo-500" id="readinessScoreTotal">82%</span>
+                <span class="block text-[11px] text-emerald-500 font-semibold">Tier-1 Company Ready</span>
+              </div>
+            </div>
+
+            <!-- Radar / Bar Chart Canvas -->
+            <div class="h-64 relative flex items-center justify-center">
+              <canvas id="readinessRadarChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Readiness Breakdown Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+              <div class="flex justify-between items-center text-xs mb-1">
+                <span class="font-bold text-slate-900 dark:text-white">DSA & Coding Fluency</span>
+                <span class="font-bold text-indigo-500" id="dsaReadinessPct">75%</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-indigo-600 h-full rounded-full" id="dsaReadinessBar" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+              <div class="flex justify-between items-center text-xs mb-1">
+                <span class="font-bold text-slate-900 dark:text-white">Aptitude & Speed Math</span>
+                <span class="font-bold text-blue-500" id="aptReadinessPct">85%</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-blue-600 h-full rounded-full" id="aptReadinessBar" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+              <div class="flex justify-between items-center text-xs mb-1">
+                <span class="font-bold text-slate-900 dark:text-white">Core Computer Science (OS/DBMS)</span>
+                <span class="font-bold text-purple-500" id="coreReadinessPct">90%</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-purple-600 h-full rounded-full" id="coreReadinessBar" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+              <div class="flex justify-between items-center text-xs mb-1">
+                <span class="font-bold text-slate-900 dark:text-white">HR & Behavioral STAR Answers</span>
+                <span class="font-bold text-emerald-500" id="hrReadinessPct">80%</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                <div class="bg-emerald-600 h-full rounded-full" id="hrReadinessBar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- MODAL: JOB DETAIL & APPLICATION VIEW -->
+  <div id="jobDetailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+    <div class="saas-card w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 relative">
+      <button id="closeJobModalBtn" class="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="jobModalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD CUSTOM APPLICATION -->
+  <div id="addAppModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+    <div class="saas-card w-full max-w-lg p-6 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 relative">
+      <button id="closeAddAppModalBtn" class="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Add Job Application</h2>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">Track any on-campus or off-campus application in your pipeline.</p>
+
+      <form id="addAppForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Company Name</label>
+          <input type="text" id="appCompanyInput" required placeholder="e.g. Cisco, Uber, Oracle" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Role / Job Title</label>
+          <input type="text" id="appRoleInput" required placeholder="e.g. Graduate Software Engineer" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Package / Stipend</label>
+            <input type="text" id="appSalaryInput" placeholder="e.g. ₹16 LPA or ₹50k/mo" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Initial Stage</label>
+            <select id="appStageSelect" class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none">
+              <option value="saved">📌 Saved</option>
+              <option value="applied">📨 Applied</option>
+              <option value="assessment">📝 Assessment</option>
+              <option value="interview">🎙️ Interview</option>
+              <option value="offer">🏆 Offer</option>
+              <option value="rejected">❌ Rejected</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Assessment / Interview Date & Notes</label>
+          <textarea id="appNotesInput" rows="2" placeholder="e.g. HackerEarth link received, scheduled for Oct 12th..." class="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition">
+          Add to Application Tracker
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: COMPANY BLUEPRINT DETAIL -->
+  <div id="companyDetailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop">
+    <div class="saas-card w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 relative">
+      <button id="closeCompanyModalBtn" class="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="companyModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- All scripts in the same folder -->
+  <script src="jobsData.js"></script>
+  <script src="aptitudeData.js"></script>
+  <script src="dsaData.js"></script>
+  <script src="technicalData.js"></script>
+  <script src="hrData.js"></script>
+  <script src="companiesData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* OUR JOBS - The Cutest & Cleanest Student Placement Platform Design System */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Cute Warm Off-White Cream Palette */
+  --bg-primary: #FAF7F2;      /* Luxurious warm off-white cream */
+  --bg-secondary: #FFFFFF;    /* Pure crisp white card surface */
+  --bg-tertiary: #F3EFE8;     /* Soft warm oatmeal */
+  --border-color: #ECE5DB;    /* Gentle warm border */
+  --border-hover: #DCD3C5;
+  --text-primary: #2B2823;    /* Deep warm charcoal espresso */
+  --text-secondary: #6B655B;  /* Soft warm grey */
+  --text-muted: #9C9488;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 4px 20px -2px rgba(90, 75, 60, 0.04), 0 2px 8px -1px rgba(90, 75, 60, 0.02);
+  --card-shadow-hover: 0 16px 36px -6px rgba(90, 75, 60, 0.09), 0 6px 14px -2px rgba(90, 75, 60, 0.04);
+  
+  /* Cute Playful Pastels */
+  --accent-primary: #6366F1;
+  --accent-hover: #4F46E5;
+  --accent-light: #EEF2FF;
+  --accent-coral: #FF6B6B;
+  --accent-peach: #FFF3EB;
+  --accent-mint: #10B981;
+  --accent-mint-bg: #ECFDF5;
+  --accent-honey: #F59E0B;
+  --accent-honey-bg: #FEF3C7;
+  --accent-lavender: #8B5CF6;
+  --accent-lavender-bg: #F5F3FF;
+  
+  --code-bg: #1E1B18;
+  --code-text: #FDFBF7;
+  --modal-overlay: rgba(43, 40, 35, 0.45);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #12151B;
+  --bg-secondary: #191E27;
+  --bg-tertiary: #222834;
+  --border-color: #2A3241;
+  --border-hover: #3A4559;
+  --text-primary: #F7FAFC;
+  --text-secondary: #A0AEC0;
+  --text-muted: #718096;
+  --card-bg: #191E27;
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+  --card-shadow-hover: 0 16px 36px -6px rgba(0, 0, 0, 0.65);
+  --accent-primary: #818CF8;
+  --accent-hover: #6366F1;
+  --accent-light: #1E1B4B;
+  --code-bg: #0E1117;
+  --code-text: #F7FAFC;
+  --modal-overlay: rgba(0, 0, 0, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, .heading-font {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+/* Warm Off-White Organic Glow */
+.hero-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 237, 213, 0.6) 0%, rgba(238, 242, 255, 0.5) 45%, rgba(250, 247, 242, 0) 80%);
+}
+
+[data-theme="dark"] .hero-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.18) 0%, rgba(18, 21, 27, 0) 70%);
+}
+
+/* Cute Warm SaaS Card with Rounded Corners */
+.saas-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 1.25rem;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.saas-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* Cute Highlight Span */
+.cute-highlight {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.6rem;
+  background-color: #FEF3C7;
+  color: #92400E;
+  font-weight: 700;
+  transform: rotate(-1.5deg);
+}
+
+[data-theme="dark"] .cute-highlight {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #FCD34D;
+}
+
+/* Cute Badge Pills */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+/* Kanban Columns with soft pastel borders */
+.kanban-col {
+  min-height: 520px;
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 1.15rem;
+}
+
+.kanban-item {
+  cursor: grab;
+  user-select: none;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(70, 55, 40, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kanban-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  box-shadow: 0 6px 16px rgba(70, 55, 40, 0.06);
+}
+
+.kanban-item:active {
+  cursor: grabbing;
+}
+
+.kanban-item.dragging {
+  opacity: 0.55;
+  transform: rotate(3deg) scale(1.02);
+}
+
+/* Cute Bouncy Buttons */
+.cute-btn-primary {
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: white;
+  border-radius: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.28);
+  transition: all 0.18s ease;
+}
+
+.cute-btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
+.cute-btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.875rem;
+  font-weight: 700;
+  transition: all 0.18s ease;
+}
+
+.cute-btn-secondary:hover {
+  background: var(--bg-tertiary);
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+}
+
+[data-theme="dark"] .cute-btn-secondary {
+  background: #191E27;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B0A2;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #2E384A;
+}
+
+/* Code Editor Specifics */
+.code-editor-area {
+  font-family: var(--font-mono);
+  background: var(--code-bg);
+  color: var(--code-text);
+  line-height: 1.65;
+  tab-size: 2;
+  white-space: pre;
+}
+
+/* Modal Backdrops */
+.modal-backdrop {
+  background: var(--modal-overlay);
+  backdrop-filter: blur(8px);
+}
+
+/* Cute Floating Animation */
+@keyframes cuteFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-cute-float {
+  animation: cuteFloat 3s ease-in-out infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
