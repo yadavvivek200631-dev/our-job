@@ -1,4 +1,4 @@
-# 🌟 OUR JOBS - Clean & Cute Placement Preparation Platform
+# 🌟 OUR JOBS - Placement Preparation Platform
 
 This folder contains the complete project files for **OUR JOBS**.
 
